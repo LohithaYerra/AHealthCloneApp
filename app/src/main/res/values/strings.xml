@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Health Care Project</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string-array name="country_codes_array">
+        <item>US</item>
+        <item>Hawaii</item>
+        <item>MX</item>
+        <item>JM</item>
+        <item>CA</item>
+        <item>VE</item>
+        <item>IL</item>
+    </string-array>
+    <string name="title_activity_maps">MapsActivity</string>
+
+
+    <string name="text_area_default_headings">Provider Comments:\n\n Addendum: \n</string>
+</resources>

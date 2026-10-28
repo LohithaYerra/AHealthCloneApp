@@ -1,0 +1,72 @@
+plugins {
+    alias(libs.plugins.android.application)
+    id 'com.google.gms.google-services'
+    id 'com.google.android.libraries.mapsplatform.secrets-gradle-plugin'
+}
+
+android {
+    namespace 'com.example.healthcareproject'
+    compileSdk 37
+
+    defaultConfig {
+        applicationId "com.example.healthcareproject"
+        minSdk 26
+        targetSdk 37
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        debug{
+            buildConfigField "String", "API_BASE_URL", '"http://161.129.91.101:90/Telemed/"'
+        }
+        release {
+            minifyEnabled false
+            buildConfigField "String", "API_BASE_URL", '"http://production.com"'
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    buildFeatures {
+        viewBinding true
+        buildConfig true
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+}
+
+dependencies {
+    implementation libs.appcompat
+    implementation libs.constraintlayout
+    implementation libs.material
+    implementation libs.country.code.picker
+
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation libs.play.services.maps
+    implementation libs.play.services.location
+
+    testImplementation libs.junit
+    androidTestImplementation libs.espresso.core
+    androidTestImplementation libs.ext.junit
+
+    implementation fileTree(dir:'libs', include: ['*.jar'])
+
+    testImplementation 'junit:junit:4.13.2'
+    implementation 'com.android.volley:volley:1.2.1'
+
+    implementation 'com.github.f0ris.sweetalert:library:1.6.2'
+
+    implementation platform('com.google.firebase:firebase-bom:34.18.0')
+    implementation 'com.google.firebase:firebase-messaging'
+    implementation 'com.google.firebase:firebase-firestore:26.6.0'
+
+    implementation 'com.google.android.gms:play-services-maps:19.0.0'
+    implementation 'com.google.android.gms:play-services-location:21.3.0'
+
+    implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.2.0'
+}

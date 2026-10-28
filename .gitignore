@@ -1,0 +1,21 @@
+*.iml
+.gradle
+/local.properties
+/.idea/caches
+/.idea/libraries
+/.idea/modules.xml
+/.idea/workspace.xml
+/.idea/navEditor.xml
+/.idea/assetWizardSettings.xml
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+.cxx
+local.properties
+
+# Firebase & Secret Service Account Keys
+*firebase-adminsdk*.json
+google-services.json
+health-care-project-2207-firebase-adminsdk-fbsvc-7eee320af3.json
+
